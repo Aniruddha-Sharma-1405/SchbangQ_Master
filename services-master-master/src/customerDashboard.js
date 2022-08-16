@@ -2,11 +2,12 @@ import React from 'react'
 import data from './data'
 import services from './services'
 import arrow from './ic_round-navigate-next.svg'
+import RecentUpdates from './Components/recentUpdates'
 export default function CustomerDashboard() {
     return (
-        <div className="main1">
-            <div className="leftBar">
-            </div>
+        <div className='grid grid-cols-9 overflow-x-hidden gap-3'>
+        
+        <div className="main1 col-span-6 ">
             <div class="Box">
                 <div className="projectBox">
                     <h2 className="intro">Welcome Back, <span style={{color:"#3F4AAF"}}>Customer 1</span></h2>
@@ -56,7 +57,10 @@ export default function CustomerDashboard() {
                     </div>
                 </div>
             </div>
-            <div className="rightBar">
-            </div>
-        </div>)
+                        </div>
+                        <div className='col-span-3'>
+                            <RecentUpdates />
+                        </div>
+        </div>
+        )
 }

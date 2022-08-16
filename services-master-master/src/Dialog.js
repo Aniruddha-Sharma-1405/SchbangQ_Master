@@ -7,6 +7,7 @@ import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import ServiceDetails from './serviceDetails';
+import RecentUpdates from './Components/recentUpdates'
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -57,7 +58,9 @@ export default function CustomizedDialogs() {
   };
 
   return (
-    <div>
+    <div className='grid grid-cols-9 gap-3'>
+
+    <div className='col-span-6 overflow-x-hidden'>
       <ServiceDetails handleClick={handleClickOpen} />
       {/* <Button variant="outlined" className="Request" onClick={handleClickOpen}>
        Request
@@ -66,12 +69,12 @@ export default function CustomizedDialogs() {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-      >
+        >
         <DialogContent dividers
         >
           <div>
             <form>
-              <div className="leftAlign"><h1>GET A QUOTATION</h1></div>
+              <div><h1>GET A QUOTATION</h1></div>
               <input type="text" id="name" name="name" placeholder="Full Name"></input>
               <input type="email" id="email" name-="email" placeholder="Email"></input>
               <input type="tel" id="phone1" name="phoneno1" placeholder="Phone No."></input>
@@ -86,5 +89,9 @@ export default function CustomizedDialogs() {
         </DialogContent>
       </BootstrapDialog>
     </div>
+    <div className='col-span-3'>
+                            <RecentUpdates />
+                        </div>
+          </div>
   );
 }

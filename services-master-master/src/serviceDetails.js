@@ -14,7 +14,7 @@ export default function ServiceDetails(props) {
     return (<div className="main">
         {/* <img src={polygon1} alt="" className="polygon1"></img> */}
         {/* <img src={polygon2} alt="" className="polygon2"></img> */}
-        <div className="leftBar"></div>
+        
         {/* <div className="sideBar">
         <img src={homeLine} className="home" alt="" onMouseOver={e => (e.currentTarget.src = {homeSolid})}></img>
         <img src={statsLine} alt="" className="stats" onMouseOver={e => (e.currentTarget.src = {statsSolid})}></img>

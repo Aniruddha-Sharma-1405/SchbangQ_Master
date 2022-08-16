@@ -5,6 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -42,5 +43,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+    <script>
+      module.exports = {
+        content: [
+          "./src/*/.{js,jsx,ts,tsx}",
+          './node_modules/flowbite-react/*/.{js,jsx,ts,tsx}',
+        ],
+        theme: {
+          borderRadius:{
+            'md': '10px'
+          },
+          colors:{
+            'gray-150' : '#F2F3FA',
+            'violetCustom': '#3F4AAF'
+          },
+          extend: {},
+        },
+        plugins: [
+          require('flowbite/plugin')
+        ],
+        }
+    </script>
+</body>
 </html>
